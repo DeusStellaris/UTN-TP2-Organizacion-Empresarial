@@ -46,12 +46,12 @@ print()
 # Analisis adicional
 temp_positivas = (datos_limpios["Mean"] > 0).sum()
 temp_negativas = (datos_limpios["Mean"] < 0).sum()
-porcentaje_positivas = (temp_positivas / cantidad_registros)
+porcentaje_positivas = (temp_positivas / cantidad_registros) * 100
 
 print(f"+{'-' * ancho_tabla3}+")
 print(f"|{'ANALISIS ADICIONAL'.center(ancho_tabla3)}|")
 print(f"+{'-' * ancho_tabla3}+")
-print(f"| Temperatura positiva      | {temp_positivas:<6} | {porcentaje_positivas:.1f}%   |")
+print(f"| Temperatura positiva      | {temp_positivas:<6} | {porcentaje_positivas:.1f}%  |")
 print(f"| Temperatura negativa      | {temp_negativas:<6} | {100 - porcentaje_positivas:.1f}%  |")
 print(f"+{'-' * ancho_tabla3}+")
 
